@@ -1,0 +1,18 @@
+<odoo>
+    <data>
+        <record id="view_res_config_settings_form_google_indexing" model="ir.ui.view">
+            <field name="name">res.config.settings.view.form.google.indexing</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//block[@name='integration']" position="after">
+                    <block title="Google Indexing" name="google_indexing_settings">
+                        <setting string="Google Indexing API Key" help="Path to the JSON key for Google's Indexing API">
+                            <field name="google_indexing_json_key"/>
+                        </setting>
+                    </block>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
